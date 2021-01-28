@@ -9,6 +9,7 @@ sudo rm -f a9rootfs.ext3
 mkdir -p rootfs/{dev,etc/init.d,lib,mnt,proc,var,tmp,sys,root}
 cp -raf busybox/_install/* rootfs/
 cp -r /usr/arm-linux-gnueabi/lib rootfs/
+cp -r etc/* rootfs/etc/
 
 # create device node
 sudo mknod rootfs/dev/tty1 c 4 1
